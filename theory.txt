@@ -5,7 +5,7 @@ npm : node package executor
 
 How to create
   1. Derect
-    > npx create-react-app name // npx create-react-app is utility(software)
+    > npx create-react-app name // create-react-app is utility( also called software)
     
   2. with vite
     > npm create vite@latest
@@ -17,3 +17,10 @@ How to start(run) app
   2. with vite
     > npm install
     > npm run dev
+
+
+You write code between these two <></> : which is known as fragmantation
+
+Component:
+  > You have to named your component with first capital compulsary
+  > Component return function which is basically your html code

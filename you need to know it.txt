@@ -1,3 +1,6 @@
+0.) react is spa 
+> Single Page Application
+
 1.) why to learn react?
 > hype, job, trend, build UI
 > makes easy to manage & build complex front end
