@@ -1,0 +1,46 @@
+1.) why to learn react?
+> hype, job, trend, build UI
+> makes easy to manage & build complex front end
+
+2.) when should i learn read?
+> after mastering js
+> most preject don't need react in initial phase
+
+3.) why react was created?
+> un consistency in UI
+> sate --> JS & UI --> DOM, not good syncing between this two
+
+4.) don't learn react if:
+> you don't know how JS works or DOM works
+
+5.) React learning precess
+> go in deapth
+	> babel, fibre, virtual DOM diff algo, hydration
+> by making prejects
+	> one topic at a time
+	> todo, calculator, github api
+
+6.) React is a library
+	> framework : rules regulation (already decided what to do)
+	> library : as per your need how to do
+
+7.) Topics to learn
+> core of react (state or UI manipulation, jsx)
+> component reusability
+> reusing of component (props --> properties)
+> how to propagate change (hooks)
+
+8.) Additional add-on to react
+> router (react don't have router -- you have to install additional package)
+> state management (react don't have state management)
+	> redux, redux, toolkit, zustand, context api
+> class based component
+	> legacy code
+> BAAS Apps (backend as as service --> like appwrite, firebase, superbase etc.)
+	> social media clone, e-commerece app...
+
+9.) after react
+> react is not a complete solution in most case
+	> no set, browser render of JS, no routing
+> framework
+	> nextJS, gatsby, remix
