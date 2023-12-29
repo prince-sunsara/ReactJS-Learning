@@ -1,0 +1,19 @@
+npx : node package manager
+    > it install package in node and then execute
+npm : node package executor
+    > it doesnot install package in node, besides in directly execute them
+
+How to create
+  1. Derect
+    > npx create-react-app name // npx create-react-app is utility(software)
+    
+  2. with vite
+    > npm create vite@latest
+
+How to start(run) app
+  1. Direct 
+    > npm run start / npm start
+
+  2. with vite
+    > npm install
+    > npm run dev
