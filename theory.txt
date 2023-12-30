@@ -58,11 +58,6 @@ react open source library
   > https://github.com/facebook/react/tree/main
 
 
-useState
-  > update the state in react
-  > it update state(value) of any variable in each place where it is used 
-
-
 vertual dom:
  > javascript can make its own dom and do any task in it (update elements and all)
 
@@ -116,3 +111,31 @@ PROPS:
   > Props allow us to customize our components based on our needs.
 
 
+useState(value, setValue)
+  > Returns a stateful value, and a function to update it.
+  > update the state in react
+  > it update state(value) of any variable in each place where it is used 
+
+
+useCallback(fn, dependencies)
+  > useCallback is a React Hook that lets you cache a function definition between re-renders.
+  > useCallback will return a memoized version of the callback that only changes if one of the inputs has changed.
+
+
+
+useEffect(setup, dependencies?)
+  > useEffect is a React Hook that lets you synchronize a component with an external system.
+  > The dependencies array determines when the effect will run, if at all. If the dependencies change, then the effect will run again
+  > The setup function will run after the first render and return a cleanup function that will be executed just before the component unmounts.
+
+  > Accepts a function that contains imperative, possibly effectful code.
+  > effect — Imperative function that can return a cleanup function
+  > deps — If present, effect will only activate if the values in the list change.
+
+
+const ref = useRef(initialValue)
+  > useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+
+  > for reference
+  > useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+  > Note that useRef() is useful for more than the ref attribute. It’s handy for keeping any mutable value around similar to how you’d use instance fields in classes.
