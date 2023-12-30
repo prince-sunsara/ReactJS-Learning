@@ -4,10 +4,11 @@ import App from "./App.jsx";
 
 function MyApp() {
   return (
-    // <App />
-    <div>
-      <h1>Custom App !</h1>
-    </div>
+    <App />
+
+    // <div>
+    //   <h1>Custom App !</h1>
+    // </div>
   );
 }
 
@@ -26,6 +27,10 @@ const anotherElement = (
   <a href='https://google.com' target='_blank'> Click Me to Visit Google</a>
 )
 
+// // variable 
+const user = 'prince';
+
+
 // this works, because we use rules by react
 const element = React.createElement(
   'a',
@@ -33,7 +38,8 @@ const element = React.createElement(
     href: "http://google.com",
     target: '_blank'
   },
-  'Click Me'
+  'Click Me',
+  user
 )
 
 ReactDOM.createRoot(document.getElementById("root")).render(

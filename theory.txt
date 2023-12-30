@@ -27,6 +27,7 @@ Component:
 
 jsx: javascript + html
 
+
 JS bundler:
  > every react use bundler(i.e babel)
  > the do their work behind the seen
@@ -45,3 +46,15 @@ const reactElement = {
     },
     children: 'Click Me to Visit Google'
 }
+
+
+variable:
+ > if you want to use variable you have to use it in curly braces
+ {name} --> this will gives value of name
+ {name} --> this is called expression, evaluated expression, which direct gives its value, cannot write codes in it
+
+
+react open source library
+  > https://github.com/facebook/react/tree/main
+
+
