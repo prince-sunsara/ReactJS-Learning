@@ -58,3 +58,6 @@ react open source library
   > https://github.com/facebook/react/tree/main
 
 
+useState
+  > update the state in react
+  > it update state of any variable in each place where it is used 

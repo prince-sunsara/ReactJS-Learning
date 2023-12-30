@@ -4,6 +4,7 @@
 1.) why to learn react?
 > hype, job, trend, build UI
 > makes easy to manage & build complex front end
+> react handles UI updation
 
 2.) when should i learn read?
 > after mastering js
