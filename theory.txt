@@ -25,3 +25,23 @@ Component:
   > You have to named your component with first capital compulsary
   > Component return function which is basically your html code
 
+jsx: javascript + html
+
+JS bundler:
+ > every react use bundler(i.e babel)
+ > the do their work behind the seen
+ > check syntax, upgrade syntax, converting syntax into html
+ > parsing of all syntax, is done by this
+
+<a href='https://google.com' target='_blank'>Click Me to Visit Google</a>
+
+above html is converted into bellow object
+
+const reactElement = {
+    type: 'a',
+    props: {
+        href: 'https://google.com',
+        target: '_blank'
+    },
+    children: 'Click Me to Visit Google'
+}
