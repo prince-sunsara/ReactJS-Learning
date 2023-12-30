@@ -99,3 +99,17 @@ The key points are:
 What is a fiber?
   > We're about to discuss the heart of React Fiber's architecture. 
   > Fibers are a much lower-level abstraction than application developers typically think about. 
+
+
+Tailwind CSS
+  > utility-first framework to build any design, directly in your markup.
+
+
+PROPS:
+  > it make component reusable
+  > it returns object
+
+  > React components use props to communicate with each other.
+  > Every parent component can pass some information to its child components by giving them props.
+  > Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, and functions.
+  > Props are the information that you pass to a JSX tag. For example, className, src, alt, width, and height are some of the props you can pass to an <img>
