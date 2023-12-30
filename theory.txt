@@ -24,3 +24,4 @@ You write code between these two <></> : which is known as fragmantation
 Component:
   > You have to named your component with first capital compulsary
   > Component return function which is basically your html code
+
