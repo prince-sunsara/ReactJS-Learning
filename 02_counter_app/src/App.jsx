@@ -19,13 +19,37 @@ function App() {
   }
 
   const plusCount = () => {
-    // if (count != 20) {
-    //   setCount(count + 1)
-    // } else {
-    //   alert('Cannot set it to more then 20!!')
-    // }
     count != 20 ? setCount(count + 1) : alert('Cannot set it to more then 20!!')
-    console.log(count);
+
+    // // INTERVIEW PURPOSE
+
+    // // // work duplication ho rha hai idhr 
+    // // // to ye set of bunch me react handle krega
+    // // // so in sbhi mai se last vala setCount run hoga
+    // // // so value ek hi bar increment hogi iski
+    // // // so ek bar click krne pr value 1 hi milegi
+    // setCount(count + 1)
+    // setCount(count + 1)
+    // setCount(count + 1)
+    // setCount(count + 1)
+
+
+    // // // idhr prevCount wo count ki previos state (value) le rha hai
+    // // // so har jitni bar work duplicate hoga utni bar count ko value add hogi
+    // // // so idhr ek bar click krne pe return 4 milega
+    // setCount(prevCount => prevCount + 1)
+    // setCount(prevCount => prevCount + 1)
+    // setCount(prevCount => prevCount + 1)
+    // setCount(prevCount => prevCount + 1)
+
+
+    // setCount(count + 1)
+    // setCount(count + 1)
+    // // above two ek bar value add krega so return value 1
+    // setCount(prevCount => prevCount + 1)
+    // setCount(prevCount => prevCount + 1)
+    // // idhr do bar 1 or 1 add hoga prevalue pe 
+    // // so outpur 3 milega
   }
 
   return (
