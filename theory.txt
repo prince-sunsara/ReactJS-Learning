@@ -142,3 +142,8 @@ const ref = useRef(initialValue)
   > Note that useRef() is useful for more than the ref attribute. It’s handy for keeping any mutable value around similar to how you’d use instance fields in classes.
   
   > ye aapko reference deta hai, koi bhi element he aapke web page pe to, kisi ka bhi aap reference le skte ho or manipulation kar skte ho
+
+
+custom Hook
+  > hooks are one type of function that return value
+  > we can create our custom hook
