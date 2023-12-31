@@ -44,7 +44,7 @@ function App() {
                 amount={amount}
                 currencyOptions={options}
                 onAmountChange={amount => setAmount(amount)}
-                onCurrencyChange={currency => { setAmount(currency) }}
+                onCurrencyChange={currency => { setFrom(currency) }}
                 selectedCurrency={from}
               />
             </div>
