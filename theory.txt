@@ -146,9 +146,26 @@ const ref = useRef(initialValue)
 
 custom Hook
   > hooks are one type of function that return value
-  > we can create our custom hook
+  > we can create ou r custom hook
 
 useId
   > useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
   > const id = useId();
   > Do not call useId to generate keys in a list. Keys should be generated from your data.
+
+
+React Router:
+  > React Router is a standard library for routing in React applications. 
+  > It enables navigation among views of various components in a React application, 
+  > allows changing the browser URL, and keeps the UI in sync with the URL.
+  > React Router is a tool built on top of React that supports the routing mechanism.
+  > It provides the synchronous URL on the browser with data that will be displayed on the web page.
+
+
+Link from React Router DOM
+  > same as 'a' tag in html
+  > 'a' tag refres whole page so we use Link instead of 'a' tag
+
+NavLink from react router dom
+  > it provide some additional feature
+  > 
