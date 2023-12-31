@@ -116,12 +116,27 @@ useState(value, setValue)
   > update the state in react
   > it update state(value) of any variable in each place where it is used 
 
+  Usage
+    > Adding state to a component
+    > Updating state based on the previous state
+    > Updating objects and arrays in state
+    > Avoiding recreating the initial state
+    > Resetting state with a key
+    > Storing information from previous renders
+
 
 useCallback(fn, dependencies)
   > useCallback is a React Hook that lets you cache a function definition between re-renders.
   > useCallback will return a memoized version of the callback that only changes if one of the inputs has changed.
 
   > function ko memorize krta hai
+  
+  Usage
+    > Skipping re-rendering of components
+    > Updating state from a memoized callback
+    > Preventing an Effect from firing too often
+    > Optimizing a custom Hook
+
 
 
 useEffect(setup, dependencies?)
@@ -134,6 +149,19 @@ useEffect(setup, dependencies?)
 
   > jab bhi page load hota hai, first time pe ye call hota hai
 
+  Usage
+    > Connecting to an external system
+    > Wrapping Effects in custom Hooks
+    > Controlling a non-React widget
+    > Fetching data with Effects
+    > Specifying reactive dependencies
+    > Updating state based on previous state from an Effect
+    > Removing unnecessary object dependencies
+    > Removing unnecessary function dependencies
+    > Reading the latest props and state from an Effect
+    > Displaying different content on the server and the client
+
+
 
 const ref = useRef(initialValue)
   > useRef is a React Hook that lets you reference a value that’s not needed for rendering.
@@ -143,15 +171,28 @@ const ref = useRef(initialValue)
   
   > ye aapko reference deta hai, koi bhi element he aapke web page pe to, kisi ka bhi aap reference le skte ho or manipulation kar skte ho
 
+  Usage
+    > Referencing a value with a ref
+    > Manipulating the DOM with a ref
+    > Avoiding recreating the ref contents
+
 
 custom Hook
   > hooks are one type of function that return value
   > we can create ou r custom hook
 
+
+
 useId
   > useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
   > const id = useId();
   > Do not call useId to generate keys in a list. Keys should be generated from your data.
+
+  Usage
+    > Generating unique IDs for accessibility attributes
+    > Generating IDs for several related elements
+    > Specifying a shared prefix for all generated IDs
+    > Using the same ID prefix on the client and the server
 
 
 React Router:
@@ -178,3 +219,16 @@ loader in route:
   > This also means data returned is stable between renders, so you can safely pass it to dependency arrays in React hooks like useEffect.
 
   
+
+CONTEXT API : useContext
+  > useContext is a React Hook that lets you read and subscribe to context from your component.
+  > Usage
+     > Passing data deeply into the tree
+     > Updating data passed via context
+     > Specifying a fallback default value
+     > Overriding context for a part of the tree
+     > Optimizing re-renders when passing objects and functions
+     
+
+
+State Management library : redux, redux toolkit(RTK), zustand
