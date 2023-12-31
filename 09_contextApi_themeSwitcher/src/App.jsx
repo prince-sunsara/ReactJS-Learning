@@ -9,10 +9,12 @@ function App() {
 
   const lightTheme = () => {
     setThemeMode("light");
+    document.body.style.backgroundColor = "white"
   }
 
   const darkTheme = () => {
     setThemeMode("dark");
+    document.body.style.backgroundColor = "rgb(31 41 55)";
   }
 
   useEffect(() => {
@@ -39,4 +41,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
