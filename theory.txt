@@ -169,3 +169,12 @@ Link from React Router DOM
 NavLink from react router dom
   > it provide some additional feature
 
+
+loader in route:
+  > In React Router DOM, each route can define a "loader" function.
+  > It provide data to the route element before it renders.
+  > This feature only works if using a data router. 
+  > The loader function simply reads the result of a fetch React Router manages internally, so you don't need to worry about it refetching when it re-renders for reasons outside of routing.\
+  > This also means data returned is stable between renders, so you can safely pass it to dependency arrays in React hooks like useEffect.
+
+  
