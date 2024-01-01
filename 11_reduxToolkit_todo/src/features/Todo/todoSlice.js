@@ -12,15 +12,15 @@ export const todoSlice = createSlice({
     },
     reducers: {
         addTodo: (state, action) => {
-            let newTodo = {
+            const newTodo = {
                 id: nanoid(),
-                text: action.payload.text,
+                text: action.payload,
             }
             state.todos.push(newTodo);
         },
-        removeState: (state, action) => {
-            state.todos = state.todos.map(todo => {
-                todo.id !== action.payload
+        removeTodo: (state, action) => {
+            state.todos = state.todos.filter(todo => {
+                return todo.id !== action.payload
             })
         }
     },
