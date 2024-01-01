@@ -1,19 +1,20 @@
 import { useState, useId, useEffect } from 'react'
-import { TodoProvider } from './contexts/index'
-import './App.css'
+import { TodoProvider } from './contexts/index';
+import TodoItem from './components/TodoItem';
+import TodoForm from './components/TodoForm';
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const todoId = useId();
 
   const addTodo = (todo) => {
-    setTodos((prev) => [...prev, { id: todoId, ...todo }])
+    setTodos((prev) => [...prev, { id: Date.now(), ...todo }])
+    // console.log(todo)
   }
 
   const updateTodo = (id, todo) => {
-    setTodos((prev) => prev.map((prevTodo) => {
+    setTodos((prev) => prev.map((prevTodo) =>
       prevTodo.id === id ? todo : prevTodo
-    }))
+    ))
   }
 
   const deleteTodo = (id) => {
@@ -24,8 +25,9 @@ function App() {
     // })
     setTodos((prev) => prev.filter(todo => todo.id !== id))
   }
+
   const toggleComplete = (id) => {
-    setTodos(prev => prev.map(todo => todo === id ? { ...todo, completed: !todo.completed } : todo))
+    setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
   }
 
   useEffect(() => {
@@ -37,6 +39,7 @@ function App() {
   }, []);
 
   useEffect(() => {
+    // console.log(todos);
     localStorage.setItem('todos', JSON.stringify(todos))
   }, [todos])
 
@@ -47,9 +50,19 @@ function App() {
           <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
           <div className="mb-4">
             {/* Todo form goes here */}
+            <TodoForm />
           </div>
+
           <div className="flex flex-wrap gap-y-3">
             {/*Loop and Add TodoItem here */}
+            {todos.map(todo => (
+              <div
+                key={todo.id}
+                className='w-full'
+              >
+                <TodoItem todo={todo} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
