@@ -232,3 +232,44 @@ CONTEXT API : useContext
 
 
 State Management library : redux, redux toolkit(RTK), zustand
+
+
+REDUX: A Predictable State Container for JS Apps
+  > It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. 
+  > On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
+  > You can use Redux together with React, or with any other view library.  but has a large ecosystem of addons available.
+
+
+REDUX TOOLKIT: The official, opinionated, batteries-included toolset for efficient Redux development
+  > The Redux Toolkit package is intended to be the standard way to write Redux logic. 
+  > It was originally created to help address three common concerns about Redux:
+      > "Configuring a Redux store is too complicated"
+      > "I have to add a lot of packages to get Redux to do anything useful"
+      > "Redux requires too much boilerplate code"
+
+  > Redux Toolkit (RTK) is a package created by the creators of Redux 
+  > to simplify the usage of Redux in modern React
+  > It includes tools like createStore, createSlice, createAsyncThunk etc.
+  > The main advantage of using RTK over plain Redux is its simplicity and performance improvements.
+
+Simple
+  > Includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more.
+Opinionated
+  > Provides good defaults for store setup out of the box, and includes the most commonly used Redux addons built-in.
+Powerful
+  > Takes inspiration from libraries like Immer and Autodux to let you write "mutative" immutable update logic, and even create entire "slices" of state automatically.
+Effective
+  > Lets you focus on the core logic your app needs, so you can do more work with less code.
+
+
+
+Some concepts that are inoth react & redux
+
+Store:
+  > sari ki sari chize idhr store hoti hai 
+Reducers:
+  > stores(mini stores) in store
+useSelector:
+  > store me se value select krni ho tb
+useDispatch:
+  > koi value store me bhejni ho tab
