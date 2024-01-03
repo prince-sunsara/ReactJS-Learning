@@ -64,10 +64,10 @@ const reactElement = {
 ### React Fiber Architecture
  > https://github.com/acdlite/react-fiber-architecture/blob/master/README.\
  > React Fiber is an ongoing reimplementation of React's core algorithm. It is the culmination of over two years of research by the React team.\
- > The goal of React Fiber is \
-      > to increase its suitability for areas like animation, layout, and gestures. \
+ > The goal of React Fiber is\
+      > to increase its suitability for areas like animation, layout, and gestures.\
  > Its headline feature is \
-      > incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.\
+      > incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
 > Other key features include :\
       > the ability to pause, abort, or reuse work as new updates come in; \
       > the ability to assign priority to different types of updates; \
@@ -86,11 +86,11 @@ Reconciliation is the algorithm behind what is popularly understood as the "virt
 Although Fiber is a ground-up rewrite of the reconciler, the high-level algorithm described in the React docs will be largely the same. The key points are:
 
   > Different component types are assumed to generate substantially different trees. React will not attempt to diff them, but rather replace the old tree completely.\
-  > Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."\
+  > Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
 
-The key points are:\
-  > In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
-  > Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
+The key points are:
+  > In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.\
+  > Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.\
   > A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
 
 ### What is a fiber?
