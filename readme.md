@@ -1,3 +1,59 @@
+# YOU NEED TO KNOW IT FIRST
+
+#### react is spa 
+    > Single Page Application
+
+#### why to learn react?
+    > hype, job, trend, build UI
+    > makes easy to manage & build complex front end
+    > react handles UI updation
+
+#### when should i learn read?
+    > after mastering js
+    > most preject don't need react in initial phase
+
+#### why react was created?
+    > un consistency in UI
+    > sate --> JS & UI --> DOM, not good syncing between this two
+
+#### don't learn react if:
+    > you don't know how JS works or DOM works
+
+#### React learning precess
+    > go in deapth
+    	> babel, fibre, virtual DOM diff algo, hydration
+    > by making prejects
+    	> one topic at a time
+    	> todo, calculator, github api
+
+#### React is a library
+	> framework : rules regulation (already decided what to do)
+	> library : as per your need how to do
+
+#### Topics to learn
+    > core of react (state or UI manipulation, jsx)
+    > component reusability
+    > reusing of component (props --> properties)
+    > how to propagate change (hooks)
+
+#### Additional add-on to react
+    > router (react don't have router -- you have to install additional package)
+    > state management (react don't have state management)
+    	> redux, redux, toolkit, zustand, context api
+    > class based component
+    	> legacy code
+    > BAAS Apps (backend as as service --> like appwrite, firebase, superbase etc.)
+    	> social media clone, e-commerece app...
+
+#### after react
+    > react is not a complete solution in most case
+    	> no set, browser render of JS, no routing
+    > framework
+    	> nextJS, gatsby, remix
+
+
+# CORE NOTE
+
 ### npx : node package manager
     > it install package in node and then execute
 ### npm : node package executor
