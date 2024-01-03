@@ -1,1 +1,275 @@
-Initial Creation
+### npx : node package manager
+    > it install package in node and then execute
+### npm : node package executor
+    > it doesnot install package in node, besides in directly execute them
+
+### How to create
+  1. Derect
+    > npx create-react-app name // create-react-app is utility( also called software)
+    
+  2. with vite
+    > npm create vite@latest
+
+### How to start(run) app
+  1. Direct 
+    > npm run start / npm start
+
+  2. with vite
+    > npm install
+    > npm run dev
+
+
+You write code between these two <></> : which is known as fragmantation
+
+### Component:
+  > You have to named your component with first capital compulsary
+  > Component return function which is basically your html code
+
+jsx: javascript + html
+
+
+### JS bundler:
+ > every react use bundler(i.e babel)
+ > the do their work behind the seen
+ > check syntax, upgrade syntax, converting syntax into html
+ > parsing of all syntax, is done by this
+
+<a href='https://google.com' target='_blank'>Click Me to Visit Google</a>
+
+above html is converted into bellow object
+
+const reactElement = {
+    type: 'a',
+    props: {
+        href: 'https://google.com',
+        target: '_blank'
+    },
+    children: 'Click Me to Visit Google'
+}
+
+
+### variable:
+ > if you want to use variable you have to use it in curly braces
+ {name} --> this will gives value of name
+ {name} --> this is called expression, evaluated expression, which direct gives its value, cannot write codes in it
+
+
+[react open source library](https://github.com/facebook/react/tree/main)
+
+
+### vertual dom:
+ > javascript can make its own dom and do any task in it (update elements and all)
+
+
+### React Fiber Architecture
+ > https://github.com/acdlite/react-fiber-architecture/blob/master/README.md
+ > React Fiber is an ongoing reimplementation of React's core algorithm. It is the culmination of over two years of research by the React team.
+ > The goal of React Fiber is 
+      > to increase its suitability for areas like animation, layout, and gestures. 
+ > Its headline feature is 
+      > incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+> Other key features include :
+      > the ability to pause, abort, or reuse work as new updates come in; 
+      > the ability to assign priority to different types of updates; 
+      > and new concurrency primitives.
+
+### What is reconciliation? : 
+  > algorithm to compare two trees (browser tree or react tree)
+  > reconciliation : The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+  > update : A change in the data used to render a React app. Usually the result of `setState`. Eventually results in a re-render.
+
+Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM."
+  > A high-level description goes something like this: when you render a React application, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment — for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
+
+Although Fiber is a ground-up rewrite of the reconciler, the high-level algorithm described in the React docs will be largely the same. The key points are:
+
+  > Different component types are assumed to generate substantially different trees. React will not attempt to diff them, but rather replace the old tree completely.
+  > Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
+
+The key points are:
+  > In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
+  > Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
+  > A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
+
+### What is a fiber?
+  > We're about to discuss the heart of React Fiber's architecture. 
+  > Fibers are a much lower-level abstraction than application developers typically think about. 
+
+
+### Tailwind CSS
+  > utility-first framework to build any design, directly in your markup.
+
+
+### PROPS:
+  > it make component reusable
+  > it returns object
+
+  > React components use props to communicate with each other.
+  > Every parent component can pass some information to its child components by giving them props.
+  > Props might remind you of HTML attributes, but you can pass any JavaScript value through them, including objects, arrays, and functions.
+  > Props are the information that you pass to a JSX tag. For example, className, src, alt, width, and height are some of the props you can pass to an <img>
+  > Props allow us to customize our components based on our needs.
+
+
+### useState(value, setValue)
+  > Returns a stateful value, and a function to update it.
+  > update the state in react
+  > it update state(value) of any variable in each place where it is used 
+
+  Usage
+    > Adding state to a component
+    > Updating state based on the previous state
+    > Updating objects and arrays in state
+    > Avoiding recreating the initial state
+    > Resetting state with a key
+    > Storing information from previous renders
+
+
+### useCallback(fn, dependencies)
+  > useCallback is a React Hook that lets you cache a function definition between re-renders.
+  > useCallback will return a memoized version of the callback that only changes if one of the inputs has changed.
+
+  > function ko memorize krta hai
+  
+  Usage
+    > Skipping re-rendering of components
+    > Updating state from a memoized callback
+    > Preventing an Effect from firing too often
+    > Optimizing a custom Hook
+
+
+
+### useEffect(setup, dependencies?)
+  > useEffect is a React Hook that lets you synchronize a component with an external system.
+  > The dependencies array determines when the effect will run, if at all. If the dependencies change, then the effect will run again
+  > The setup function will run after the first render and return a cleanup function that will be executed just before the component unmounts.
+  > Accepts a function that contains imperative, possibly effectful code.
+  > effect — Imperative function that can return a cleanup function
+  > deps — If present, effect will only activate if the values in the list change.
+
+  > jab bhi page load hota hai, first time pe ye call hota hai
+
+  Usage
+    > Connecting to an external system
+    > Wrapping Effects in custom Hooks
+    > Controlling a non-React widget
+    > Fetching data with Effects
+    > Specifying reactive dependencies
+    > Updating state based on previous state from an Effect
+    > Removing unnecessary object dependencies
+    > Removing unnecessary function dependencies
+    > Reading the latest props and state from an Effect
+    > Displaying different content on the server and the client
+
+
+
+### const ref = useRef(initialValue)
+  > useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+  > for reference
+  > useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+  > Note that useRef() is useful for more than the ref attribute. It’s handy for keeping any mutable value around similar to how you’d use instance fields in classes.
+  
+  > ye aapko reference deta hai, koi bhi element he aapke web page pe to, kisi ka bhi aap reference le skte ho or manipulation kar skte ho
+
+  Usage
+    > Referencing a value with a ref
+    > Manipulating the DOM with a ref
+    > Avoiding recreating the ref contents
+
+
+### custom Hook
+  > hooks are one type of function that return value
+  > we can create ou r custom hook
+
+
+
+### useId
+  > useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
+  > const id = useId();
+  > Do not call useId to generate keys in a list. Keys should be generated from your data.
+
+  Usage
+    > Generating unique IDs for accessibility attributes
+    > Generating IDs for several related elements
+    > Specifying a shared prefix for all generated IDs
+    > Using the same ID prefix on the client and the server
+
+
+### React Router:
+  > React Router is a standard library for routing in React applications. 
+  > It enables navigation among views of various components in a React application, 
+  > allows changing the browser URL, and keeps the UI in sync with the URL.
+  > React Router is a tool built on top of React that supports the routing mechanism.
+  > It provides the synchronous URL on the browser with data that will be displayed on the web page.
+
+
+### Link from React Router DOM
+  > same as 'a' tag in html
+  > 'a' tag refres whole page so we use Link instead of 'a' tag
+
+### NavLink from react router dom
+  > it provide some additional feature
+
+
+### loader in route:
+  > In React Router DOM, each route can define a "loader" function.
+  > It provide data to the route element before it renders.
+  > This feature only works if using a data router. 
+  > The loader function simply reads the result of a fetch React Router manages internally, so you don't need to worry about it refetching when it re-renders for reasons outside of routing.\
+  > This also means data returned is stable between renders, so you can safely pass it to dependency arrays in React hooks like useEffect.
+
+  
+
+### CONTEXT API : useContext
+  > useContext is a React Hook that lets you read and subscribe to context from your component.
+  > Usage
+     > Passing data deeply into the tree
+     > Updating data passed via context
+     > Specifying a fallback default value
+     > Overriding context for a part of the tree
+     > Optimizing re-renders when passing objects and functions
+     
+
+
+State Management library : redux, redux toolkit(RTK), zustand
+
+
+### REDUX: A Predictable State Container for JS Apps
+  > It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. 
+  > On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
+  > You can use Redux together with React, or with any other view library.  but has a large ecosystem of addons available.
+
+
+### REDUX TOOLKIT: The official, opinionated, batteries-included toolset for efficient Redux development
+  > The Redux Toolkit package is intended to be the standard way to write Redux logic. 
+  > It was originally created to help address three common concerns about Redux:
+      > "Configuring a Redux store is too complicated"
+      > "I have to add a lot of packages to get Redux to do anything useful"
+      > "Redux requires too much boilerplate code"
+
+  > Redux Toolkit (RTK) is a package created by the creators of Redux 
+  > to simplify the usage of Redux in modern React
+  > It includes tools like createStore, createSlice, createAsyncThunk etc.
+  > The main advantage of using RTK over plain Redux is its simplicity and performance improvements.
+
+Simple
+  > Includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more.
+Opinionated
+  > Provides good defaults for store setup out of the box, and includes the most commonly used Redux addons built-in.
+Powerful
+  > Takes inspiration from libraries like Immer and Autodux to let you write "mutative" immutable update logic, and even create entire "slices" of state automatically.
+Effective
+  > Lets you focus on the core logic your app needs, so you can do more work with less code.
+
+
+
+### Some concepts that are in both react & redux
+
+Store:
+  > sari ki sari chize idhr store hoti hai 
+Reducers:
+  > stores(mini stores) in store
+useSelector:
+  > store me se value select krni ho tb
+useDispatch:
+  > koi value store me bhejni ho tab
