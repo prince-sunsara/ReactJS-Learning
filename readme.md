@@ -54,9 +54,9 @@
 
 # CORE NOTE
 
-### npx : node package manager
+### npm : node package manager
     > it install package in node and then execute
-### npm : node package executor
+### npx : node package executor
     > it doesnot install package in node, besides in directly execute them
 
 ### How to create
