@@ -15,7 +15,7 @@ export class DatabaseService {
     }
 
     // create a post
-    async createPost({ title, slug, content, featuredImage, status, useId }) {
+    async createPost({ title, slug, content, featuredImage, status, userId }) {
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
@@ -26,8 +26,8 @@ export class DatabaseService {
                     content,
                     featuredImage,
                     status,
-                    useId
-                }
+                    userId
+                },
             )
         } catch (error) {
             throw error;
@@ -44,7 +44,8 @@ export class DatabaseService {
             )
             return true;
         } catch (error) {
-            throw error;
+            console.log(error);
+            return false
         }
     }
 
@@ -63,7 +64,7 @@ export class DatabaseService {
                 }
             )
         } catch (error) {
-            throw error;
+            console.log(error);
         }
     }
 
@@ -76,7 +77,7 @@ export class DatabaseService {
                 slug
             )
         } catch (error) {
-            throw error;
+            console.log(error);
         }
     }
 
@@ -92,7 +93,8 @@ export class DatabaseService {
                 ]
             )
         } catch (error) {
-            throw error;
+            console.log(error);
+            return false;
         }
     }
 
@@ -100,13 +102,14 @@ export class DatabaseService {
     // upload file
     async fileUpload(file) {
         try {
-            await this.bucket.createFile(
+            return await this.bucket.createFile(
                 conf.appwriteBucketId,
                 ID.unique(),
                 file
             )
         } catch (error) {
-            throw error;
+            console.log(error);
+            return false;
         }
     }
 
@@ -119,7 +122,8 @@ export class DatabaseService {
             )
             return true;
         } catch (err) {
-            throw err
+            console.log(err);
+            return false;
         }
     }
 

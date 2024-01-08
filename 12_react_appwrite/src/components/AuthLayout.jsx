@@ -9,6 +9,7 @@ export default function Protected({
     const navigate = useNavigate()
     const [loader, setLoader] = useState(true)
     const authStatus = useSelector(state => state.auth.status)
+
     useEffect(() => {
         // todo : make it more easy
         // if(authStatus === true){
@@ -23,5 +24,6 @@ export default function Protected({
         }
         setLoader(false)
     }, [authStatus, navigate, authentication])
+
     return loader ? <h1>Loading...</h1> : <>{children}</>
 }

@@ -4,6 +4,7 @@ import { Container, PostCard } from '../components'
 
 function Home() {
     const [posts, setPosts] = useState([])
+
     useEffect(() => {
         databaseService.getPosts().then((posts) => {
             if (posts) {
@@ -11,17 +12,19 @@ function Home() {
             }
         })
     }, [])
+
     if (posts.length === 0) {
         return (
-            <div className="w-full mt-4 py-8 text-center">
+            <div className="mt-4 py-8 text-center">
                 <Container>
                     <div className='flex flex-wrap'>
-                        <h1>No posts yet!</h1>
+                        <h1 className=' text-2xl m-auto'>No posts yet! Login Please</h1>
                     </div>
                 </Container>
             </div>
         )
     }
+
     return (
         <div className="w-full py-8">
             <Container>

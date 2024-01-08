@@ -6,7 +6,7 @@ import { Button, Container } from '../components'
 import parse from 'html-react-parser'
 
 export default function Post() {
-    const [post, setPost] = useState([])
+    const [post, setPost] = useState(null)
     const slug = useParams()
     const navigate = useNavigate()
 
@@ -15,7 +15,7 @@ export default function Post() {
 
     useEffect(() => {
         if (slug) {
-            databaseService.getPosts(slug).then(post => {
+            databaseService.getSinglePost(slug).then(post => {
                 if (post) setPost(post)
                 else navigate("/")
             })

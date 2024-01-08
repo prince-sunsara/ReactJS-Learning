@@ -15,12 +15,30 @@ export default function RTE({ name, control, label, defaultValue = '' }) {
                     <Editor
                         initialValue={defaultValue}
                         init={{
-                            height: 500,
+                            initialValue: defaultValue,
+                            height: 450,
                             menubar: true,
                             plugins: [
-                                'advlist autolink lists link image charmap print preview anchor',
-                                'searchreplace visualblocks code fullscreen',
-                                'insertdatetime media table paste help wordcount'
+                                "image",
+                                "advlist",
+                                "autolink",
+                                "lists",
+                                "link",
+                                "image",
+                                "charmap",
+                                "preview",
+                                "anchor",
+                                "searchreplace",
+                                "visualblocks",
+                                "code",
+                                "fullscreen",
+                                "insertdatetime",
+                                "media",
+                                "table",
+                                "code",
+                                "help",
+                                "wordcount",
+                                "anchor",
                             ],
                             toolbar:
                                 'undo redo | formatselect | bold italic backcolor forecolor | \
