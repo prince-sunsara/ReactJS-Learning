@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux'
 
 
 function PostForm({ post }) {
+    // console.log(post)
     const { handleSubmit, register, watch, setValue, control, getValues } = useForm({
         defaultValues: {
             title: post?.title || "",
@@ -17,15 +18,19 @@ function PostForm({ post }) {
     });
 
     const navigate = useNavigate()
-    const userData = useSelector((state) => state.auth.userData)
+    let userData = useSelector((state) => state.auth.userData)
+    // console.log(userData)
 
     const submit = async (data) => {
+        // console.log(data)
+        // console.log(data.$id);
         if (!post) {
+            console.log(data.image[0]);
             const file = await databaseService.fileUpload(data.image[0]);
+            console.log(file);
 
             if (file) {
-                const fileId = file.$id;
-                data.featuredImage = fileId;
+                data.featuredImage = file.$id;
                 const dbPost = await databaseService.createPost({
                     ...data,
                     userId: userData.$id,
@@ -51,13 +56,12 @@ function PostForm({ post }) {
     }
 
     const slugTransform = useCallback((value) => {
-        if (value && typeof value === 'string') {
+        if (value && typeof value === 'string')
             return value
                 .trim()
                 .toLowerCase()
                 .replace(/^[a-zA-Z\d\s]+/g, '-')
                 .replace(/\s/g, '-')
-        } else return ''
     }, [])
 
     useEffect(() => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './App'
 import './index.css'
 import store from './store/store.js'
 import { Provider } from 'react-redux'
@@ -17,7 +17,7 @@ import AddPost from './pages/AddPost'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: App ? <App /> : null,
     children: [
       {
         path: '/',
